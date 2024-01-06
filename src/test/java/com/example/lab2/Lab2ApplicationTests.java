@@ -29,7 +29,7 @@ class Lab2ApplicationTests {
 
 	@Test
 	void getAllOrdersReturnAllOrders() throws Exception {
-
+		System.out.println("sdfsdfsdf");
 		Mockito.when(this.orderController.index()).thenReturn(getOrders());
 
 		mvc.perform(get("/orders"))
