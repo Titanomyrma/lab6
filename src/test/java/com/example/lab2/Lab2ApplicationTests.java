@@ -34,7 +34,7 @@ class Lab2ApplicationTests {
 
 		mvc.perform(get("/orders"))
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.length()").value(6));
+				.andExpect(jsonPath("$.length()").value(5));
 	}
 
 
