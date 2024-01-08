@@ -24,12 +24,8 @@ class Lab2ApplicationTests {
 	OrderController orderController;
 
 
-
-
-
 	@Test
 	void getAllOrdersReturnAllOrders() throws Exception {
-		System.out.println("sdfsdfsdf");
 		Mockito.when(this.orderController.index()).thenReturn(getOrders());
 
 		mvc.perform(get("/orders"))
@@ -59,7 +55,7 @@ class Lab2ApplicationTests {
 
 		mvc.perform(get("/order/105"))
 				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.id").value(105L))
+				.andExpect(jsonPath("$.id").value(106L))
 				.andExpect(jsonPath("$.price").value(15))
 				.andExpect(jsonPath("$.quantity").value(234))
 				.andExpect(jsonPath("$.name").value("Pesdsdn"));
